@@ -5,3 +5,12 @@ body {
 header {
 	text-align: center;
 }
+
+.hidden {
+	display: none;
+}
+
+.active {
+	background: steelblue;
+	color: white;
+}

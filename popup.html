@@ -7,8 +7,9 @@
 			<h1>Shortcuts</h1>
 			<p>(Alt + S will open this popup)</p>
 		</header>
-		<div id="sublime-shortcuts">
-			<h3>Sublime shortcuts</h3>
+		<button id="sublime-button" class="active button">Sublime shortcuts</button>
+		<button id="chrome-button" class="button">Chrome shortcuts</button>
+		<div id="sublime" class="shortcut-div">
 			<table border="1">
 				<tr><th>Shortcut</th><th>Action</th></tr>
 				<tr><td>Ctrl + P</td><td>Goto anywhere</td></tr>
@@ -22,5 +23,13 @@
 				<tr><td>Ctrl + Shift + Tab</td><td>Move back a tab</td></tr>
 			</table>
 		</div>
+		<div id="chrome" class="shortcut-div hidden">
+			<table border="1">
+				<tr><th>Shortcut</th><th>Action</th></tr>
+				<tr><td>Ctrl + T</td><td>Open New Tab</td></tr>
+				<tr><td>Ctrl + N</td><td>Open New Window</td></tr>
+			</table>
+		</div>
+		<script src="popup.js"></script>
 	</body>
 </html>
