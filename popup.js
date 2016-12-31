@@ -7,6 +7,21 @@ var shortcutButtons = document.querySelectorAll('.button');
 chromeButton.onclick = buttonClick.bind(this, 'chrome');
 sublimeButton.onclick = buttonClick.bind(this, 'sublime');
 
+//gross. this is cheating, isn't it?
+document.onkeydown = function (event) {
+	var alt = event.altKey;
+	if (alt) {
+		switch (event.key) {
+			case 'c':
+				buttonClick.call(this, 'chrome', { currentTarget: chromeButton });
+				break;
+			case 'u':
+				buttonClick.call(this, 'sublime', { currentTarget: sublimeButton });
+				break;
+		}
+	}
+};
+
 function buttonClick(name, event) {
 	shortcutButtons.forEach(function (button) {
 		if (button !== event.currentTarget) {
