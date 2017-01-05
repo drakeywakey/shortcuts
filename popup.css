@@ -6,6 +6,11 @@ header {
 	text-align: center;
 }
 
+.shortcut-div {
+	display: flex;
+	justify-content: center;
+}
+
 .hidden {
 	display: none;
 }
